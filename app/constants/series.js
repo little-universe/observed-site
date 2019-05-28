@@ -2,6 +2,7 @@ import introBackground from '../assets/images/gallery/custodian/cover-custodian.
 import project001Background from '../assets/images/gallery/project001/cover-project001.jpg';
 import project002Background from '../assets/images/gallery/project002/cover-project002.jpg';
 import project003Background from '../assets/images/gallery/project003/cover-project003.jpg';
+import project004Background from '../assets/images/gallery/project004/cover-project004.jpg';
 import comingSoonBackground from '../assets/images/gallery/empty.gif';
 
 import {
@@ -9,6 +10,7 @@ import {
   PROJECT_001_ROUTE,
   PROJECT_002_ROUTE,
   PROJECT_003_ROUTE,
+  PROJECT_004_ROUTE,
 } from './routes';
 
 export const SERIES = [
@@ -56,11 +58,11 @@ export const SERIES = [
   {
     id: 4,
     title: '.004',
-    year: 'UNKNOWN',
-    subtitle: 'Coming Soon',
-    description: '',
-    link: '',
-    background: comingSoonBackground,
+    year: '2019',
+    subtitle: 'Project 004 Subtitle',
+    description: '.004 is the most recent piece in OBSERVED’s series.',
+    link: PROJECT_004_ROUTE,
+    background: project004Background,
   },
   {
     id: 5,
