@@ -1,0 +1,87 @@
+.home {
+  height: 100%;
+
+  &__image-wrapper {
+    position: relative;
+    height: 100%;
+  }
+
+  &__loop-image {
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    top: 10vh;
+    left: 0;
+    width: 100vw;
+    height: 70vh;
+
+    @include larger-than(mobile) {
+      height: 100vh;
+      top: 0;
+    }
+
+    &--active {
+      z-index: 12;
+    }
+  }
+
+  &__fade-image {
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    top: 10vh;
+    left: 0;
+    width: 100vw;
+    height: 70vh;
+
+    @include larger-than(mobile) {
+      height: 100vh;
+      top: 0;
+    }
+  }
+
+  &__actions-wrapper {
+    @include absolute-center--horizontal;
+    bottom: 50px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 1s ease-in-out;
+    z-index: 15;
+    animation-name: enterButtonAnimation;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-delay: 5s;
+    animation-fill-mode: forwards;
+
+    &--mobile {
+      animation-duration: 1s;
+      animation-delay: 0s;
+    }
+  }
+
+  &__actions-button {
+    font-family: $grotesque-bold;
+    font-size: 16px;
+    letter-spacing: 3px;
+    border: 1px solid #f3f3f3;
+    padding: 10px 15px;
+    text-transform: uppercase;
+    color: #f3f3f3;
+    text-decoration: none;
+  }
+}
+
+@keyframes enterButtonAnimation {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}

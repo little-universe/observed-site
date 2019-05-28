@@ -1,0 +1,29 @@
+.ar-wrapper {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  background-size: cover;
+  background-position: center center;
+
+  @include larger-than(mobile) {
+    width: 100%;
+    height: auto;
+    padding-bottom: 75%; /* 4:3 */
+  }
+
+  @include larger-than(tablet) {
+    padding-bottom: 56.25%; /* 16:9 */
+  }
+
+  &--contact-page {
+    background-position: 75% center;
+  }
+
+  &__content {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+}

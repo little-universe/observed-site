@@ -1,0 +1,38 @@
+// Main Styles Entry Point
+
+// Base
+@import 'base/normalize';
+@import 'base/variables';
+@import 'base/colors';
+@import 'base/media_queries';
+@import 'base/defaults';
+@import 'base/webfonts/brandon-grotesque';
+@import 'base/webfonts/europa';
+@import 'base/webfonts/spectral';
+
+// Common
+@import 'common/resets';
+@import 'common/helpers';
+@import 'common/containers';
+
+// Components
+@import 'components/header';
+@import 'components/menu';
+@import 'components/subscribe';
+@import 'components/ar-wrapper';
+@import 'components/series-slider';
+@import 'components/project-slider';
+@import 'components/audio-player';
+@import 'components/lightbox';
+@import 'components/share-button';
+@import 'components/social';
+
+// Views
+@import 'components/contact';
+@import 'components/about';
+@import 'components/series';
+@import 'components/home';
+@import 'components/project';
+
+// Vendor
+@import "~video-react/styles/scss/video-react";

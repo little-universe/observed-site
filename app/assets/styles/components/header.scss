@@ -1,0 +1,154 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  z-index: $zindex-header;
+  padding: 20px;
+  max-width: 1440px;
+  margin: 0 auto;
+
+  @include larger-than(mobile) {
+    padding: 40px 20px;
+  }
+
+  &__center-content {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+  }
+
+  &__logo {
+    width: 170px;
+
+    @include larger-than(mobile) {
+      width: 300px;
+    }
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  &__shop {
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &--desktop {
+      display: none;
+
+      @include larger-than(mobile) {
+        font-family: $grotesque-regular;
+        font-size: 16px;
+        letter-spacing: 3px;
+        color: $main-text;
+        text-decoration: none;
+        text-transform: uppercase;
+        display: block;
+      }
+    }
+
+    &--mobile {
+      display: block;
+
+      @include larger-than(mobile) {
+        display: none;
+      }
+    }
+  }
+
+  &__left-content {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__breadcrumbs {
+    display: none;
+
+    @include larger-than(mobile) {
+      padding-left: 15px;
+      font-family: $grotesque-regular;
+      font-size: 16px;
+      letter-spacing: 3px;
+      color: $main-text;
+      text-decoration: none;
+      text-transform: uppercase;
+      display: block;
+    }
+  }
+
+  &__breadcrumbs-close {
+    @include reset-button;
+    @include larger-than(mobile) {
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  &__breadcrumbs-extension {
+    text-decoration: none;
+
+    @include larger-than(mobile) {
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  &__additional-breadcrumb {
+    border-left: 1px solid #c6c9ce;
+    margin-left: 10px;
+    padding-left: 10px;
+  }
+
+  &__center-breadcrumb {
+    font-family: $grotesque-regular;
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: $main-text;
+    margin-bottom: -30px;
+    padding-top: 5px;
+
+    @include larger-than(mobile) {
+      display: none;
+    }
+  }
+
+  &__menu-icon {
+    @include reset-button;
+
+    @include larger-than(mobile) {
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  &__menu-close,
+  &__menu-open {
+    width: 30px;
+    height: 30px;
+
+    @include larger-than(mobile) {
+      width: 40px;
+      height: 40px;
+      margin-top: -9.5px;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}

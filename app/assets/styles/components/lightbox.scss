@@ -1,0 +1,179 @@
+.lightbox {
+  &__container {
+    @include absolute-center;
+    position: fixed;
+    background: #000;
+    z-index: 9999999;
+    height: 100vh;
+    width: 100vw;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.25s ease-in-out;
+
+    &--opened {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  &__content {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__asset-wrapper {
+    margin: 0 auto;
+    position: relative;
+    max-width: 85%;
+    flex: 1;
+
+    @include larger-than(mobile) {
+      max-width: 73%;
+      width: 73%;
+    }
+
+    @include larger-than(tablet) {
+      max-width: 73%;
+      width: 73%;
+    }
+
+    @include larger-than(desktop) {
+      max-width: 75%;
+      width: 75%;
+    }
+
+    @include larger-than(largeDesktop) {
+      max-width: 73%;
+      width: 73%;
+    }
+  }
+
+  &__close {
+    @include reset-button;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 20px;
+
+    &--video {
+      z-index: 100;
+      right: 0;
+      top: -10px;
+    }
+  }
+
+  &__video-wrapper {
+    @include absolute-center;
+
+    .video-react {
+      width: 80vw !important;
+    }
+  }
+
+  // Side Controls
+
+  &__right-control-wrapper {
+    @include absolute-center--vertical;
+    position: absolute;
+    right: 10px;
+    z-index: 70;
+
+    @include larger-than(mobile) {
+      right: 60px;
+    }
+
+    @include larger-than(smallDesktop) {
+      right: 80px;
+    }
+
+    @include larger-than(desktop) {
+      right: 100px;
+    }
+
+    @include larger-than(largeDesktop) {
+      right: 120px;
+    }
+  }
+
+  &__left-control-wrapper {
+    @include absolute-center--vertical;
+    position: absolute;
+    left: 10px;
+    z-index: 70;
+
+    @include larger-than(mobile) {
+      left: 60px;
+    }
+
+    @include larger-than(smallDesktop) {
+      left: 80px;
+    }
+
+    @include larger-than(desktop) {
+      left: 100px;
+    }
+
+    @include larger-than(largeDesktop) {
+      left: 120px;
+    }
+  }
+
+  &__right-arrow,
+  &__left-arrow {
+    @include reset-button;
+  }
+
+  &__right-arrow-image {
+    &--desktop {
+      display: none;
+
+      @include larger-than(tablet) {
+        display: block;
+      }
+    }
+
+    &--mobile {
+      display: block;
+
+      @include larger-than(mobile) {
+        width: 40px;
+      }
+
+      @include larger-than(tablet) {
+        display: none;
+      }
+    }
+  }
+
+  &__left-arrow-image {
+    &--desktop {
+      display: none;
+
+      @include larger-than(tablet) {
+        display: block;
+      }
+    }
+
+    &--mobile {
+      display: block;
+      transform: rotate(180deg);
+
+      @include larger-than(mobile) {
+        width: 40px;
+      }
+
+      @include larger-than(tablet) {
+        display: none;
+      }
+    }
+  }
+
+  &__click-outside {
+    display: block;
+  }
+}

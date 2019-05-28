@@ -1,0 +1,26 @@
+// Defaults
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100% !important;
+}
+
+body {
+  color: $main-text;
+  font-family: 'Helvetica', serif;
+  background-color: $main-background;
+  user-select: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+}

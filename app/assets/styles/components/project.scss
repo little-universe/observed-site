@@ -1,0 +1,27 @@
+.project {
+  height: 100%;
+  padding: 100px 10px 10px 10px;
+  transition: all 0.25s ease-in-out;
+
+  @include larger-than(tablet) {
+    @include absolute-center;
+    height: auto;
+    padding: 0;
+    text-align: center;
+    max-width: 850px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  @include larger-than(tablet) {
+    max-width: 850px;
+  }
+
+  @include larger-than(smallDesktop) {
+    max-width: 950px;
+  }
+
+  @include larger-than(desktop) {
+    max-width: 1000px
+  }
+}

@@ -1,0 +1,7 @@
+// @flow
+
+export const SET_MENU_OPENED = 'SET_MENU_OPENED';
+export const SET_MENU_CLOSED = 'SET_MENU_CLOSED';
+
+export const SET_LIGHTBOX_CLOSED = 'SET_LIGHTBOX_CLOSED';
+export const SET_LIGHTBOX_OPENED = 'SET_LIGHTBOX_OPENED';

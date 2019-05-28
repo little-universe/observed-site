@@ -1,0 +1,65 @@
+.subscribe {
+  margin: 10px 0;
+
+  &__button {
+    @include reset-button;
+    font-size: 11px;
+    cursor: pointer;
+    padding: 12px 12px 10px 12px;
+    font-family: $grotesque-black;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    border: 1px solid #f3f3f3;
+    margin-right: -30px;
+    transition: margin-right 0.1s ease;
+
+    @include larger-than(tablet) {
+      font-size: 16px;
+    }
+
+    &:hover {
+      background: #939598;
+    }
+
+    &--opened {
+      margin-right: 0;
+    }
+
+    &:disabled {
+      opacity: 1;
+      cursor: default;
+
+      &:hover {
+        background: transparent;
+      }
+    }
+  }
+
+  &__input {
+    @include reset-text-input;
+    width: 0;
+    border-bottom: 1px solid #383839;
+    transition: all 0.25s ease-in-out;
+    color: #f3f3f3;
+    padding: 11px 15px;
+    opacity: 0;
+    visibility: hidden;
+
+    &::placeholder {
+      color: #eee;
+    }
+
+    &--opened {
+      width: 300px;
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &__results-message {
+    padding: 15px 0;
+    font-weight: 900;
+    font-family: $grotesque-regular;
+    color: #f3f3f3;
+  }
+}
