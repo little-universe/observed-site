@@ -6,11 +6,18 @@ export const ABOUT_SLIDE_1 = [
 ];
 
 export const ABOUT_SLIDE_2 = [
-  'Our work demonstrates where we stand so others can stand with us. We are currently exhibiting a series on the streets of New York City that changes with time... but there are many other aspects of OBSERVED. Future installations, collaborations and product lines are all in development. There is more to see if you stay connected. We hope you do.',
-  'The journey requires many... will you join us?',
+  'The Phsyical World'
 ];
 
 export const ABOUT_SLIDE_3 = [
+  'The Digital World'
+];
+
+export const ABOUT_SLIDE_4 = [
+  'The Material World (Products)'
+];
+
+export const ABOUT_SLIDE_5 = [
   'From Now On…',
   'I Am',
   'You Are',
