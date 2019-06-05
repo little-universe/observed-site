@@ -12,9 +12,8 @@ import {
   ABOUT_SLIDE_3,
   ABOUT_SLIDE_4,
   ABOUT_SLIDE_5,
-  ABOUT_SLIDE_6
 } from '../constants/about';
-import backgroundImage from '../assets/images/background/about.jpg';
+// import backgroundImage from '../assets/images/background/about.jpg';
 import arrowLeftImage from '../assets/images/arrow-left.svg';
 import arrowRightImage from '../assets/images/arrow-right.svg';
 import chevronRightImage from '../assets/images/chevron-right.svg';
@@ -185,6 +184,7 @@ class AboutView extends PureComponent<{}, State> {
               <AboutSlide
                 data={[]}
                 onClick={debouncedNextSlide}
+                className='about-slide-0'
               />
               <AboutSlide
                 data={ABOUT_SLIDE_1}

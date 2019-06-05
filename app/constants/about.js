@@ -6,15 +6,15 @@ export const ABOUT_SLIDE_1 = [
 ];
 
 export const ABOUT_SLIDE_2 = [
-  'The Phsyical World'
+  'The Phsyical World',
 ];
 
 export const ABOUT_SLIDE_3 = [
-  'The Digital World'
+  'The Digital World',
 ];
 
 export const ABOUT_SLIDE_4 = [
-  'The Material World (Products)'
+  'The Material World (Products)',
 ];
 
 export const ABOUT_SLIDE_5 = [
