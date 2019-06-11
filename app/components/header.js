@@ -8,6 +8,7 @@ import menuOpen from '../assets/images/menu-open.svg';
 import menuClose from '../assets/images/menu-close.svg';
 import shopCart from '../assets/images/cart.svg';
 import type { HeaderType } from '../types/header';
+import { PromoBanner } from '../components/promo-banner';
 import {
   SERIES_ROUTE,
   CONTACT_ROUTE,
@@ -225,10 +226,13 @@ class HeaderComponent extends PureComponent<Props> {
 
   render() {
     return (
-      <div className='header'>
-        {this.renderLeftContent()}
-        {this.renderCenterContent()}
-        {this.renderRightContent()}
+      <div>
+        <PromoBanner />
+        <div className='header'>
+          {this.renderLeftContent()}
+          {this.renderCenterContent()}
+          {this.renderRightContent()}
+        </div>
       </div>
     );
   }
