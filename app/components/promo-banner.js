@@ -14,14 +14,16 @@ export const PromoBanner = (props: Props) => {
   });
 
   return (
-    <div
-      className={promoBannerClassnames}
-      style={{ }}
-    >
-      <div className='promo-banner__content'>
-        <p className='promo-banner__statement'>Our web shop is now live.</p>
+    <a href='https://shop.weareobserved.com/'>
+      <div
+        className={promoBannerClassnames}
+        style={{ }}
+      >
+        <div className='promo-banner__content'>
+          <p className='promo-banner__statement'>Our web shop is now live.</p>
+        </div>
       </div>
-    </div>
+    </a>
   );
 };
 
