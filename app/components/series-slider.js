@@ -4,6 +4,7 @@ import React, { Fragment, PureComponent } from 'react';
 import { Link } from 'react-router-dom';
 import debounce from 'lodash.debounce';
 import cx from 'classnames';
+import { SHOP_LINK } from '../constants/shop';
 import arrowLeftImage from '../assets/images/arrow-left.svg';
 import arrowRightImage from '../assets/images/arrow-right.svg';
 import chevronRightImage from '../assets/images/chevron-dark-bg-right.svg';
@@ -115,6 +116,7 @@ class SeriesSlider extends PureComponent<Props, State> {
       description,
       link,
       extraDescription,
+      hasShop,
     } = projects[activeIndex];
 
     const numOfProjects = projects.length - 1;
@@ -157,6 +159,14 @@ class SeriesSlider extends PureComponent<Props, State> {
           >
             View Project
           </Link>
+        )}
+        {(!hasShop || hasShop === false) ? null : (
+          <a
+            href={SHOP_LINK}
+            className='series-slider__shop-button'
+          >
+            Shop
+          </a>
         )}
       </div>
     );

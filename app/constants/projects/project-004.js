@@ -22,7 +22,7 @@ import project004Slide21 from '../../assets/images/gallery/project004/slide21-pr
 import project004Slide22 from '../../assets/images/gallery/project004/slide22-project004.jpg';
 import project004Slide23 from '../../assets/images/gallery/project004/slide23-project004.jpg';
 import project004Cover from '../../assets/images/gallery/project004/cover-project004.jpg';
-import project004Shop from '../../assets/images/gallery/project004/shop-project004.jpg';
+// import project004Shop from '../../assets/images/gallery/project004/shop-project004.jpg';
 
 // Video Assets
 // import { VIDEO_003 } from '../../constants/videos';
@@ -41,6 +41,7 @@ export const PROJECT_004_SLIDES = [
   {
     type: SLIDE_IMAGE_TYPE,
     image: project004Cover,
+    isShop: true,
     title: '.004 Title',
     description: 'Cover Slide',
     id: 0,
@@ -48,6 +49,7 @@ export const PROJECT_004_SLIDES = [
   {
     type: SLIDE_IMAGE_TYPE,
     image: project004Slide2,
+    isShop: true,
     title: '.004 Title',
     description: 'First Slide',
     id: 1,
@@ -55,6 +57,7 @@ export const PROJECT_004_SLIDES = [
   {
     type: SLIDE_IMAGE_TYPE,
     image: project004Slide3,
+    isShop: true,
     title: '.004 Title',
     description: 'Second Slide',
     id: 2,
@@ -62,6 +65,7 @@ export const PROJECT_004_SLIDES = [
   {
     type: SLIDE_IMAGE_TYPE,
     image: project004Slide4,
+    isShop: true,
     title: '.004 Title',
     description: 'Third Slide',
     id: 3,
@@ -69,6 +73,7 @@ export const PROJECT_004_SLIDES = [
   {
     type: SLIDE_IMAGE_TYPE,
     image: project004Slide5,
+    isShop: true,
     title: '.004 Title',
     description: 'Fourth Slide',
     id: 4,
@@ -76,6 +81,7 @@ export const PROJECT_004_SLIDES = [
   {
     type: SLIDE_IMAGE_TYPE,
     image: project004Slide6,
+    isShop: true,
     title: '.004 Title',
     description: 'Fifth Slide',
     id: 5,
@@ -83,6 +89,7 @@ export const PROJECT_004_SLIDES = [
   {
     type: SLIDE_IMAGE_TYPE,
     image: project004Slide7,
+    isShop: true,
     title: '.004 Title',
     description: 'Sixth Slide',
     id: 6,
@@ -90,6 +97,7 @@ export const PROJECT_004_SLIDES = [
   {
     type: SLIDE_IMAGE_TYPE,
     image: project004Slide8,
+    isShop: true,
     title: '.004 Title',
     description: 'Seventh Slide',
     id: 7,
@@ -97,6 +105,7 @@ export const PROJECT_004_SLIDES = [
   {
     type: SLIDE_IMAGE_TYPE,
     image: project004Slide9,
+    isShop: true,
     title: '.004 Title',
     description: 'Eighth Slide',
     id: 8,
@@ -104,6 +113,7 @@ export const PROJECT_004_SLIDES = [
   {
     type: SLIDE_IMAGE_TYPE,
     image: project004Slide10,
+    isShop: true,
     title: '.004 Title',
     description: 'Ninth Slide',
     id: 9,
@@ -111,6 +121,7 @@ export const PROJECT_004_SLIDES = [
   {
     type: SLIDE_IMAGE_TYPE,
     image: project004Slide11,
+    isShop: true,
     title: '.004 Title',
     description: 'Tenth Slide',
     id: 10,
@@ -118,6 +129,7 @@ export const PROJECT_004_SLIDES = [
   {
     type: SLIDE_IMAGE_TYPE,
     image: project004Slide12,
+    isShop: true,
     title: '.004 Title',
     description: 'Eleventh Slide',
     id: 11,
@@ -125,6 +137,7 @@ export const PROJECT_004_SLIDES = [
   {
     type: SLIDE_IMAGE_TYPE,
     image: project004Slide13,
+    isShop: true,
     title: '.004 Title',
     description: 'Twelfth Slide',
     id: 12,
@@ -132,6 +145,7 @@ export const PROJECT_004_SLIDES = [
   {
     type: SLIDE_IMAGE_TYPE,
     image: project004Slide14,
+    isShop: true,
     title: '.004 Title',
     description: 'Thirteenth Slide',
     id: 13,
@@ -139,6 +153,7 @@ export const PROJECT_004_SLIDES = [
   {
     type: SLIDE_IMAGE_TYPE,
     image: project004Slide15,
+    isShop: true,
     title: '.004 Title',
     description: 'Fourteeth Slide',
     id: 14,
@@ -146,6 +161,7 @@ export const PROJECT_004_SLIDES = [
   {
     type: SLIDE_IMAGE_TYPE,
     image: project004Slide16,
+    isShop: true,
     title: '.004 Title',
     description: 'Fifteenth Slide',
     id: 15,
@@ -153,6 +169,7 @@ export const PROJECT_004_SLIDES = [
   {
     type: SLIDE_IMAGE_TYPE,
     image: project004Slide17,
+    isShop: true,
     title: '.004 Title',
     description: 'Sixteenth Slide',
     id: 16,
@@ -160,6 +177,7 @@ export const PROJECT_004_SLIDES = [
   {
     type: SLIDE_IMAGE_TYPE,
     image: project004Slide18,
+    isShop: true,
     title: '.004 Title',
     description: 'Seventeenth Slide',
     id: 17,
@@ -167,6 +185,7 @@ export const PROJECT_004_SLIDES = [
   {
     type: SLIDE_IMAGE_TYPE,
     image: project004Slide19,
+    isShop: true,
     title: '.004 Title',
     description: 'Eighteenth Slide',
     id: 18,
@@ -174,6 +193,7 @@ export const PROJECT_004_SLIDES = [
   {
     type: SLIDE_IMAGE_TYPE,
     image: project004Slide20,
+    isShop: true,
     title: '.004 Title',
     description: 'Ninteenth Slide',
     id: 19,
@@ -181,6 +201,7 @@ export const PROJECT_004_SLIDES = [
   {
     type: SLIDE_IMAGE_TYPE,
     image: project004Slide21,
+    isShop: true,
     title: '.004 Title',
     description: 'Twentieth Slide',
     id: 20,
@@ -188,6 +209,7 @@ export const PROJECT_004_SLIDES = [
   {
     type: SLIDE_IMAGE_TYPE,
     image: project004Slide22,
+    isShop: true,
     title: '.004 Title',
     description: 'Twenty-First Slide',
     id: 21,
@@ -195,16 +217,9 @@ export const PROJECT_004_SLIDES = [
   {
     type: SLIDE_IMAGE_TYPE,
     image: project004Slide23,
+    isShop: true,
     title: '.004 Title',
     description: 'Twenty-Second Slide',
     id: 22,
-  },
-  {
-    type: SLIDE_IMAGE_TYPE,
-    image: project004Shop,
-    isShop: true,
-    title: 'Shop The OBSERVED World',
-    description: 'The only place to find OBSERVED objects...',
-    id: 20,
   },
 ];

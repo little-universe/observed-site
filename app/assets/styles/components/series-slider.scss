@@ -377,4 +377,29 @@
       }
     }
   }
+  &__shop-button {
+    width: 100%;
+    font-size: 11px;
+    cursor: pointer;
+    padding: 6px 10px;
+    font-family: $grotesque-black;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    border: 1px solid $bgColorDark;
+    background: $bgColorDark;
+    color: #f3f3f3;
+    margin-top: 10px;
+    padding: 5px;
+    text-decoration: none;
+    text-align: center;
+
+    @include larger-than(tablet) {
+      // margin-bottom: 10px;
+      font-size: 16px;
+    }
+
+    &:hover {
+      background: #939598;
+    }
+  }
 }

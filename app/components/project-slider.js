@@ -148,15 +148,20 @@ class ProjectSlider extends PureComponent<Props, State> {
                     controls
                   />
                 )}
-                {!slide.isShop ? null : (
+              </div>
+              {!slide.isShop ? null : (
+                <div className='project-slider__bottom-content'>
+                  <ShareButton
+                    url='https://weareobserved.com'
+                  />
                   <a
                     href={SHOP_LINK}
                     className='project-slider__shop-button'
                   >
-                    Enter
+                    Shop
                   </a>
-                )}
-              </div>
+                </div>
+              )}
               {slide.isShop ? null : (
                 <div className='project-slider__bottom-content'>
                   <ShareButton

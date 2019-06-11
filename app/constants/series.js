@@ -63,6 +63,7 @@ export const SERIES = [
     description: '.004 is the most recent piece in OBSERVED’s series.',
     link: PROJECT_004_ROUTE,
     background: project004Background,
+    hasShop: true,
   },
   {
     id: 5,
