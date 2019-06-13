@@ -18,6 +18,7 @@ import {
   PROJECT_001_ROUTE,
   PROJECT_002_ROUTE,
   PROJECT_003_ROUTE,
+  PROJECT_004_ROUTE,
   PROJECT_INTRO_ROUTE,
 } from '../constants/routes';
 
@@ -44,6 +45,7 @@ class HeaderComponent extends PureComponent<Props> {
       case PROJECT_001_ROUTE:
       case PROJECT_002_ROUTE:
       case PROJECT_003_ROUTE:
+      case PROJECT_004_ROUTE:
         breadcrumb = 'GALLERY';
         route = SERIES_ROUTE;
         break;
