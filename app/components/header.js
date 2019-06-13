@@ -233,14 +233,14 @@ class HeaderComponent extends PureComponent<Props> {
     const { location: { pathname } } = this.props;
     if (pathname === HOME_ROUTE) return null;
     return (
-      <PromoBanner/>
+      <PromoBanner />
     );
   }
 
   render() {
     return (
       <div>
-      {this.renderPromoContent()}
+        {this.renderPromoContent()}
         <div className='header'>
           {this.renderLeftContent()}
           {this.renderCenterContent()}
