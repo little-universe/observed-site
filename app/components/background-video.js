@@ -19,7 +19,7 @@ export const BackgroundVideo = (props: Props) => {
       style={{ }}
     >
       <div className='background-video__content'>
-        <video className='background-video__video' src="https://lu-assets.s3.us-east-2.amazonaws.com/observed/7666480-preview-optimized.mp4" playsinline autoplay muted loop></video>
+        <video className='background-video__video' src='https://lu-assets.s3.us-east-2.amazonaws.com/observed/7666480-preview-optimized.mp4' playsinline autoPlay muted loop />
       </div>
     </div>
   );
