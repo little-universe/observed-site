@@ -7,6 +7,8 @@ import { AudioPlayer } from './audio-player';
 import { ShareButton } from './share';
 import { SHOP_LINK } from '../constants/shop';
 import { SLIDE_AUDIO_TYPE, SLIDE_IMAGE_TYPE } from '../constants/projects/types';
+import { PROJECT_ROUTES } from '../constants/routes';
+import { history } from '../store/configure';
 import arrowLeftImage from '../assets/images/arrow-left.svg';
 import arrowRightImage from '../assets/images/arrow-right.svg';
 import chevronRightImage from '../assets/images/chevron-dark-bg-right.svg';
@@ -19,6 +21,7 @@ import playButtonImage from '../assets/images/play.svg'; // eslint-disable-line
 
 type Props = {
   // Data
+  projectIndex: number,
   slides: Array<Object>,
 
   // Actions
@@ -67,6 +70,28 @@ class ProjectSlider extends PureComponent<Props, State> {
 
       return { activeIndex: prevState.activeIndex };
     });
+  }
+
+  goToNextProject = () => {
+    const { projectIndex } = this.props;
+
+    const isLastProject = projectIndex === PROJECT_ROUTES.length - 1;
+    if (isLastProject) {
+      history.push(PROJECT_ROUTES[0]);
+    } else {
+      history.push(PROJECT_ROUTES[projectIndex + 1]);
+    }
+  }
+
+  goToPreviousProject = () => {
+    const { projectIndex } = this.props;
+
+    const isFirstProject = projectIndex === 0;
+    if (isFirstProject) {
+      history.push(PROJECT_ROUTES[PROJECT_ROUTES.length - 1]);
+    } else {
+      history.push(PROJECT_ROUTES[projectIndex - 1]);
+    }
   }
 
   goToSpecificSlide = (slideIndex: number) => {
@@ -179,14 +204,15 @@ class ProjectSlider extends PureComponent<Props, State> {
   renderLeftSideControl = () => {
     const { activeIndex } = this.state;
 
-    if (activeIndex <= 0) return null;
+    const goToPrevious = activeIndex <= 0 ?
+      this.goToPreviousProject : this.goToPreviousSlide;
 
     return (
       <Fragment>
         <div className='project-slider__left-control-wrapper'>
           <button
             className='project-slider__left-arrow'
-            onClick={() => this.goToPreviousSlide()}
+            onClick={() => goToPrevious()}
           >
             <img
               src={arrowLeftImage}
@@ -198,7 +224,7 @@ class ProjectSlider extends PureComponent<Props, State> {
         <div className='project-slider__left-control-wrapper-mobile'>
           <button
             className='project-slider__left-arrow project-slider__left-arrow--mobile'
-            onClick={() => this.goToPreviousSlide()}
+            onClick={() => goToPrevious()}
           >
             <img
               src={chevronRightImage}
@@ -215,14 +241,15 @@ class ProjectSlider extends PureComponent<Props, State> {
     const { slides } = this.props;
     const { activeIndex } = this.state;
 
-    if (activeIndex >= slides.length - 1) return null;
+    const goToNext = activeIndex >= slides.length - 1 ?
+      this.goToNextProject : this.goToNextSlide;
 
     return (
       <Fragment>
         <div className='project-slider__right-control-wrapper'>
           <button
             className='project-slider__right-arrow'
-            onClick={() => this.goToNextSlide()}
+            onClick={() => goToNext()}
           >
             <img
               src={arrowRightImage}
@@ -234,7 +261,7 @@ class ProjectSlider extends PureComponent<Props, State> {
         <div className='project-slider__right-control-wrapper-mobile'>
           <button
             className='project-slider__right-arrow project-slider__right-arrow--mobile'
-            onClick={() => this.goToNextSlide()}
+            onClick={() => goToNext()}
           >
             <img
               src={chevronRightImage}

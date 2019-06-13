@@ -9,6 +9,7 @@ export const Project004View = () => (
   <div className='project'>
     <ARWrapper>
       <ProjectSliderContainer
+        projectIndex={4}
         slides={PROJECT_004_SLIDES}
       />
     </ARWrapper>
