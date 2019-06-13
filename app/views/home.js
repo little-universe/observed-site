@@ -25,7 +25,7 @@ class HomeView extends PureComponent<Props, State> {
       this.setState(() => ({
         isLooping: true,
       }));
-    }, 8000);
+    }, 0);
   }
 
   render() {
