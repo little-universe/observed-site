@@ -11,6 +11,8 @@ import { PROJECT_ROUTES } from '../constants/routes';
 import { history } from '../store/configure';
 import arrowLeftImage from '../assets/images/arrow-left.svg';
 import arrowRightImage from '../assets/images/arrow-right.svg';
+import projectArrowLeft from '../assets/images/project-arrow-left.svg';
+import projectArrowRight from '../assets/images/project-arrow-right.svg';
 import chevronRightImage from '../assets/images/chevron-dark-bg-right.svg';
 
 // Need this to use these assets in SCSS
