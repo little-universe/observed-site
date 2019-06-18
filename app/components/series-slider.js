@@ -92,21 +92,21 @@ class SeriesSlider extends PureComponent<Props, State> {
 
     return (
       <Fragment>
-      <Swipe
-        onSwipeLeft={() => this.goToNextSlide()}
-        onSwipeRight={() => this.goToPreviousSlide()}
-      >
-        {projects.map(project => (
-          <div
-            key={project.id}
-            className='series-slider__series-background'
-            style={{
-              backgroundImage: `url(${project.background})`,
-              opacity: (activeIndex === project.id) ? 1 : 0,
-              zIndex: project.id + 50,
-            }}
-          />
-        ))}
+        <Swipe
+          onSwipeLeft={() => this.goToNextSlide()}
+          onSwipeRight={() => this.goToPreviousSlide()}
+        >
+          {projects.map(project => (
+            <div
+              key={project.id}
+              className='series-slider__series-background'
+              style={{
+                backgroundImage: `url(${project.background})`,
+                opacity: (activeIndex === project.id) ? 1 : 0,
+                zIndex: project.id + 50,
+              }}
+            />
+          ))}
         </Swipe>
       </Fragment>
     );
