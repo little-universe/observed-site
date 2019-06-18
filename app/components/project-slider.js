@@ -11,6 +11,8 @@ import { PROJECT_ROUTES } from '../constants/routes';
 import { history } from '../store/configure';
 import arrowLeftImage from '../assets/images/arrow-left.svg';
 import arrowRightImage from '../assets/images/arrow-right.svg';
+import projectArrowLeftImage from '../assets/images/project-arrow-left.svg';
+import projectArrowRightImage from '../assets/images/project-arrow-right.svg';
 import chevronRightImage from '../assets/images/chevron-dark-bg-right.svg';
 
 // Need this to use these assets in SCSS
@@ -204,8 +206,11 @@ class ProjectSlider extends PureComponent<Props, State> {
   renderLeftSideControl = () => {
     const { activeIndex } = this.state;
 
-    const goToPrevious = activeIndex <= 0 ?
+    const isFirstSlide = activeIndex <= 0;
+    const goToPrevious = isFirstSlide ?
       this.goToPreviousProject : this.goToPreviousSlide;
+    const arrowLeft = isFirstSlide ?
+      projectArrowLeftImage : arrowLeftImage;
 
     return (
       <Fragment>
@@ -215,7 +220,7 @@ class ProjectSlider extends PureComponent<Props, State> {
             onClick={() => goToPrevious()}
           >
             <img
-              src={arrowLeftImage}
+              src={arrowLeft}
               alt='Next'
               className='project-slider__left-arrow-image project-slider__left-arrow-image--desktop'
             />
@@ -241,8 +246,11 @@ class ProjectSlider extends PureComponent<Props, State> {
     const { slides } = this.props;
     const { activeIndex } = this.state;
 
-    const goToNext = activeIndex >= slides.length - 1 ?
+    const isLastSlide = activeIndex >= slides.length - 1;
+    const goToNext = isLastSlide ?
       this.goToNextProject : this.goToNextSlide;
+    const arrowRight = isLastSlide ?
+      projectArrowRightImage : arrowRightImage;
 
     return (
       <Fragment>
@@ -252,7 +260,7 @@ class ProjectSlider extends PureComponent<Props, State> {
             onClick={() => goToNext()}
           >
             <img
-              src={arrowRightImage}
+              src={arrowRight}
               alt='Next'
               className='project-slider__right-arrow-image project-slider__right-arrow-image--desktop'
             />
