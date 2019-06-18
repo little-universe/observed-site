@@ -93,9 +93,6 @@ class SeriesSlider extends PureComponent<Props, State> {
     return (
       <Fragment>
       <Swipe
-        onSwipeStart={this.onSwipeStart}
-        onSwipeMove={this.onSwipeMove}
-        onSwipeEnd={this.onSwipeEnd}
         onSwipeLeft={() => this.goToNextSlide()}
         onSwipeRight={() => this.goToPreviousSlide()}
       >
