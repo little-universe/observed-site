@@ -1,6 +1,7 @@
 // @flow
 
 import React, { Fragment, PureComponent } from 'react';
+import Swipe from 'react-easy-swipe';
 import debounce from 'lodash.debounce';
 import cx from 'classnames';
 import { AudioPlayer } from './audio-player';
@@ -141,65 +142,72 @@ class ProjectSlider extends PureComponent<Props, State> {
     });
 
     return (
-      <div className='project-slider__slides-wrapper'>
-        {slides.map(slide => (
-          <div
-            key={slide.id}
-            className='project-slider__slide-content'
-            style={{
-              zIndex: getZIndex(slide.id),
-              opacity: getOpacity(slide.id),
-              visibility: getVisibility(slide.id),
-            }}
-          >
-            <button
-              onClick={() => {
-                setLightboxOpened(slides, activeIndex);
-              }}
-              className={imageWrapperClassnames}
-              style={{ backgroundImage: `url(${image})` }}
-            />
-            <div className='project-slider__single-content'>
-              <div className='project-slider__top-content'>
-                <div className='project-slider__title-wrapper'>
-                  {title}
-                </div>
-                <div className='project-slider__description-wrapper'>
-                  <div className='project-slider__description'>
-                    {description}
+      <Fragment>
+        <Swipe
+          onSwipeLeft={() => this.goToNextSlide()}
+          onSwipeRight={() => this.goToPreviousSlide()}
+        >
+          <div className='project-slider__slides-wrapper'>
+            {slides.map(slide => (
+              <div
+                key={slide.id}
+                className='project-slider__slide-content'
+                style={{
+                  zIndex: getZIndex(slide.id),
+                  opacity: getOpacity(slide.id),
+                  visibility: getVisibility(slide.id),
+                }}
+              >
+                <button
+                  onClick={() => {
+                    setLightboxOpened(slides, activeIndex);
+                  }}
+                  className={imageWrapperClassnames}
+                  style={{ backgroundImage: `url(${image})` }}
+                />
+                <div className='project-slider__single-content'>
+                  <div className='project-slider__top-content'>
+                    <div className='project-slider__title-wrapper'>
+                      {title}
+                    </div>
+                    <div className='project-slider__description-wrapper'>
+                      <div className='project-slider__description'>
+                        {description}
+                      </div>
+                    </div>
+                    {!isAudioSlide ? null : (
+                      <AudioPlayer
+                        src={audio}
+                        controls
+                      />
+                    )}
                   </div>
+                  {!slide.isShop ? null : (
+                    <div className='project-slider__bottom-content'>
+                      <ShareButton
+                        url='https://weareobserved.com'
+                      />
+                      <a
+                        href={SHOP_LINK}
+                        className='project-slider__shop-button'
+                      >
+                        Shop
+                      </a>
+                    </div>
+                  )}
+                  {slide.isShop ? null : (
+                    <div className='project-slider__bottom-content'>
+                      <ShareButton
+                        url='https://weareobserved.com'
+                      />
+                    </div>
+                  )}
                 </div>
-                {!isAudioSlide ? null : (
-                  <AudioPlayer
-                    src={audio}
-                    controls
-                  />
-                )}
               </div>
-              {!slide.isShop ? null : (
-                <div className='project-slider__bottom-content'>
-                  <ShareButton
-                    url='https://weareobserved.com'
-                  />
-                  <a
-                    href={SHOP_LINK}
-                    className='project-slider__shop-button'
-                  >
-                    Shop
-                  </a>
-                </div>
-              )}
-              {slide.isShop ? null : (
-                <div className='project-slider__bottom-content'>
-                  <ShareButton
-                    url='https://weareobserved.com'
-                  />
-                </div>
-              )}
-            </div>
+            ))}
           </div>
-        ))}
-      </div>
+        </Swipe>
+      </Fragment>
     );
   }
 
