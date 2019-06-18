@@ -1,6 +1,7 @@
 // @flow
 
 import React, { Fragment, PureComponent } from 'react';
+import Swipe from 'react-easy-swipe';
 import debounce from 'lodash.debounce';
 import cx from 'classnames';
 import { AudioPlayer } from './audio-player';
@@ -141,6 +142,14 @@ class ProjectSlider extends PureComponent<Props, State> {
     });
 
     return (
+      <Fragment>
+      <Swipe
+        onSwipeStart={this.onSwipeStart}
+        onSwipeMove={this.onSwipeMove}
+        onSwipeEnd={this.onSwipeEnd}
+        onSwipeLeft={() => this.goToNextSlide()}
+        onSwipeRight={() => this.goToPreviousSlide()}
+      >
       <div className='project-slider__slides-wrapper'>
         {slides.map(slide => (
           <div
@@ -200,6 +209,8 @@ class ProjectSlider extends PureComponent<Props, State> {
           </div>
         ))}
       </div>
+      </Swipe>
+      </Fragment>
     );
   }
 

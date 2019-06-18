@@ -1,6 +1,7 @@
 // @flow
 
 import React, { Fragment, PureComponent } from 'react';
+import Swipe from 'react-easy-swipe';
 import { Link } from 'react-router-dom';
 import debounce from 'lodash.debounce';
 import cx from 'classnames';
@@ -91,6 +92,13 @@ class SeriesSlider extends PureComponent<Props, State> {
 
     return (
       <Fragment>
+      <Swipe
+        onSwipeStart={this.onSwipeStart}
+        onSwipeMove={this.onSwipeMove}
+        onSwipeEnd={this.onSwipeEnd}
+        onSwipeLeft={() => this.goToNextSlide()}
+        onSwipeRight={() => this.goToPreviousSlide()}
+      >
         {projects.map(project => (
           <div
             key={project.id}
@@ -102,6 +110,7 @@ class SeriesSlider extends PureComponent<Props, State> {
             }}
           />
         ))}
+        </Swipe>
       </Fragment>
     );
   }
