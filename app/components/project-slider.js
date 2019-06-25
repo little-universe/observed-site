@@ -15,6 +15,8 @@ import arrowRightImage from '../assets/images/arrow-right.svg';
 import projectArrowLeftImage from '../assets/images/project-arrow-left.svg';
 import projectArrowRightImage from '../assets/images/project-arrow-right.svg';
 import chevronRightImage from '../assets/images/chevron-dark-bg-right.svg';
+import { trackExpandedImage } from '../utils/analytics';
+import { navigateToShop } from '../utils/navigation';
 
 // Need this to use these assets in SCSS
 // $FlowFixMe
@@ -160,6 +162,7 @@ class ProjectSlider extends PureComponent<Props, State> {
               >
                 <button
                   onClick={() => {
+                    trackExpandedImage();
                     setLightboxOpened(slides, activeIndex);
                   }}
                   className={imageWrapperClassnames}
@@ -190,6 +193,7 @@ class ProjectSlider extends PureComponent<Props, State> {
                       <a
                         href={SHOP_LINK}
                         className='project-slider__shop-button'
+                        onClick={navigateToShop}
                       >
                         Shop
                       </a>

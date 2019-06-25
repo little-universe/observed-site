@@ -21,6 +21,7 @@ import {
   PROJECT_004_ROUTE,
   PROJECT_INTRO_ROUTE,
 } from '../constants/routes';
+import { navigateToShop } from '../utils/navigation';
 
 type Props = {
   // Actions
@@ -213,12 +214,14 @@ class HeaderComponent extends PureComponent<Props> {
         <a
           href={SHOP_LINK}
           className='header__shop header__shop--desktop'
+          onClick={navigateToShop}
         >
           Shop
         </a>
         <a
           href={SHOP_LINK}
           className='header__shop header__shop--mobile'
+          onClick={navigateToShop}
         >
           <img
             src={shopCart}

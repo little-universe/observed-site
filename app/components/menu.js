@@ -10,6 +10,7 @@ import { SHOP_LINK } from '../constants/shop';
 import { HOME_ROUTE } from '../constants/routes';
 import type { HeaderType } from '../types/header';
 import observedLogo from '../assets/images/logo.svg';
+import { navigateToShop } from '../utils/navigation';
 
 type Props = {
   // Actions
@@ -50,6 +51,7 @@ class MenuComponent extends PureComponent<Props> {
               href={SHOP_LINK}
               className='menu__item'
               key={route}
+              onClick={navigateToShop}
             >
               {label}
             </a>

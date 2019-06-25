@@ -9,6 +9,8 @@ import { SHOP_LINK } from '../constants/shop';
 import arrowLeftImage from '../assets/images/arrow-left.svg';
 import arrowRightImage from '../assets/images/arrow-right.svg';
 import chevronRightImage from '../assets/images/chevron-dark-bg-right.svg';
+import { trackClickedToGallery } from '../utils/analytics';
+import { navigateToShop } from '../utils/navigation';
 
 const IS_MOBILE = window.innerWidth <= 768;
 
@@ -162,6 +164,7 @@ class SeriesSlider extends PureComponent<Props, State> {
           <Link
             to={link}
             className='series-slider__details-link'
+            onClick={trackClickedToGallery}
           >
             View Project
           </Link>
@@ -170,6 +173,7 @@ class SeriesSlider extends PureComponent<Props, State> {
           <a
             href={SHOP_LINK}
             className='series-slider__shop-button'
+            onClick={navigateToShop}
           >
             Shop
           </a>
