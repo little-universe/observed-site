@@ -50,7 +50,7 @@
     transition: all 1s ease-in-out;
     z-index: 15;
     animation-name: enterButtonAnimation;
-    animation-duration: 2s;
+    animation-duration: 0s;
     animation-iteration-count: 1;
     animation-timing-function: ease-in;
     animation-delay: 0s;
@@ -66,14 +66,120 @@
     font-family: $grotesque-bold;
     font-size: 16px;
     letter-spacing: 3px;
-    border: 1px solid #f3f3f3;
     padding: 10px 15px;
     text-transform: uppercase;
-    color: #f3f3f3;
-    text-decoration: none;
     cursor: pointer;
+    position: relative;
+    margin: 0 auto;
+    border: 1px solid transparent;
   }
+  //BUTTON LINE ANIMATION
+  .top,
+  .bottom,
+  .left,
+  .right {
+    position: absolute;
+    -webkit-animation: 2s linear ;
+            animation: 2s linear ;
+  }
+  .top {
+    top: -1px;
+    left: -1px;
+    height: 1px;
+    -webkit-animation-name: top;
+            animation-name: top;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+  }
+  @-webkit-keyframes top {
+    40% {
+      width: 0;
+      background: #f3f3f3;
+    }
+    60% {
+      width: calc(102%);
+      background: #f3f3f3;
+    }
+    100% {
+      width: calc(102%);
+      background: #f3f3f3;
+    }
+  }
+
+  .bottom {
+    bottom: 0px;
+    right: -1px;
+    height: 1px;
+    -webkit-animation-name: bottom;
+            animation-name: bottom;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+  }
+  @-webkit-keyframes bottom {
+    0% {
+      width: 0;
+    }
+    20% {
+      width: calc(102%);
+      background: #f3f3f3;
+    }
+    100% {
+      width: calc(102%);
+      background: #f3f3f3;
+    }
+  }
+
+  .left {
+    bottom: -1px;
+    left: -1px;
+    width: 1px;
+    -webkit-animation-name: left;
+            animation-name: left;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+  }
+  @-webkit-keyframes left {
+    20% {
+      height: 0;
+      background: #f3f3f3;
+    }
+    40% {
+      height: calc(102%);
+      background: #f3f3f3;
+    }
+    100% {
+      height: calc(102%);
+      background: #f3f3f3;
+    }
+  }
+
+  .right {
+    top: -1px;
+    right: -1px;
+    width: 1px;
+    -webkit-animation-name: right;
+            animation-name: right;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+  }
+  @-webkit-keyframes right {
+    60% {
+      height: 0;
+      background: #f3f3f3;
+    }
+    80% {
+      height: calc(102%);
+      background: #f3f3f3;
+    }
+    100% {
+      height: calc(102%);
+      background: #f3f3f3;
+    }
+  }
+  //BUTTON LINE ANIMATION
+
 }
+
 
 @keyframes enterButtonAnimation {
   0% {

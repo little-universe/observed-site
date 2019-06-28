@@ -65,6 +65,10 @@ class HomeView extends PureComponent<Props, State> {
             className='home__actions-button'
             onClick={trackClickedToEnter}
           >
+            <span className="top"/>
+            <span className="bottom"/>
+            <span className="left"/>
+            <span className="right"/>
             Enter
           </Link>
         </div>
