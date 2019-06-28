@@ -79,8 +79,8 @@
   .left,
   .right {
     position: absolute;
-    -webkit-animation: 2s linear ;
-            animation: 2s linear ;
+    -webkit-animation: 1.5s linear ;
+            animation: 1.5s linear ;
   }
   .top {
     top: -1px;
@@ -118,6 +118,7 @@
   @-webkit-keyframes bottom {
     0% {
       width: 0;
+      background: #f3f3f3;
     }
     20% {
       width: calc(102%);
