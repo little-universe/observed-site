@@ -198,6 +198,7 @@ class AboutView extends PureComponent<{}, State> {
                 data={ABOUT_SLIDE_3}
                 onClick={debouncedNextSlide}
                 className='about-slide-3'
+                showLogo
               />
             </Carousel>
             {this.renderControls()}
