@@ -106,7 +106,7 @@ class SubscribeComponent extends PureComponent<Props, State> {
       'subscribe__button--opened': isOpened,
     });
 
-    const text = isComplete ? 'Joined' : 'Join Us';
+    const text = isComplete ? 'Subscribed' : 'See More';
 
     return (
       <button

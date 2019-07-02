@@ -20,7 +20,7 @@ export const PromoBanner = (props: Props) => {
         style={{ }}
       >
         <div className='promo-banner__content'>
-          <p className='promo-banner__statement'>Our web shop is now live.</p>
+          <p className='promo-banner__statement'>The .004 Paper Is Now Available For Purchase</p>
         </div>
       </div>
     </a>

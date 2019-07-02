@@ -7,7 +7,7 @@ export const CONTACT_EMAILS = [
 ];
 
 export const CONTACT_PHONES = [
-  { label: 'Call', value: '929-376-9828' },
+  { label: 'The Custodian\'s Thoughts', value: '929-376-9828' },
 ];
 
 export const STAY_UPDATED_LABEL = 'Stay updated';

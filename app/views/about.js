@@ -10,8 +10,6 @@ import {
   ABOUT_SLIDE_1,
   ABOUT_SLIDE_2,
   ABOUT_SLIDE_3,
-  ABOUT_SLIDE_4,
-  ABOUT_SLIDE_5,
 } from '../constants/about';
 // import backgroundImage from '../assets/images/background/about.jpg';
 import arrowLeftImage from '../assets/images/arrow-left.svg';
@@ -20,7 +18,7 @@ import chevronRightImage from '../assets/images/chevron-right.svg';
 import chevronLeftImage from '../assets/images/chevron-left.svg';
 
 const DELAY_FADE_INTRO = 1000;
-const SLIDE_INDEXES = [1, 2, 3, 4, 5]; // skips empty 0 slide
+const SLIDE_INDEXES = [1, 2, 3]; // skips empty 0 slide
 
 type State = {
   slideIndex: number,
@@ -200,17 +198,6 @@ class AboutView extends PureComponent<{}, State> {
                 data={ABOUT_SLIDE_3}
                 onClick={debouncedNextSlide}
                 className='about-slide-3'
-              />
-              <AboutSlide
-                data={ABOUT_SLIDE_4}
-                onClick={debouncedNextSlide}
-                className='about-slide-4'
-              />
-              <AboutSlide
-                data={ABOUT_SLIDE_5}
-                onClick={debouncedNextSlide}
-                className='about-slide-5'
-                showLogo
               />
             </Carousel>
             {this.renderControls()}
