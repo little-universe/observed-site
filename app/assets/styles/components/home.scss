@@ -75,13 +75,19 @@
   }
   //BUTTON LINE ANIMATION
   .top,
-  .bottom,
-  .left,
-  .right {
+  .bottom {
     position: absolute;
     -webkit-animation: 1.5s linear ;
             animation: 1.5s linear ;
   }
+
+  .left,
+  .right  {
+    position: absolute;
+    -webkit-animation: 1s linear ;
+            animation: 1s linear ;
+  }
+  
   .top {
     top: -1px;
     left: -1px;
