@@ -21,6 +21,8 @@ import project004Slide20 from '../../assets/images/gallery/project004/slide20-pr
 import project004Slide21 from '../../assets/images/gallery/project004/slide21-project004.jpg';
 import project004Slide22 from '../../assets/images/gallery/project004/slide22-project004.jpg';
 import project004Slide23 from '../../assets/images/gallery/project004/slide23-project004.jpg';
+import project004Slide24 from '../../assets/images/gallery/project004/slide24-project004.jpg';
+import project004Slide25 from '../../assets/images/gallery/project004/slide25-project004.jpg';
 import project004Cover from '../../assets/images/gallery/project004/cover-project004.jpg';
 // import project004Shop from '../../assets/images/gallery/project004/shop-project004.jpg';
 
@@ -221,5 +223,21 @@ export const PROJECT_004_SLIDES = [
     title: '.004',
     description: 'Page 23.',
     id: 22,
+  },
+  {
+    type: SLIDE_IMAGE_TYPE,
+    image: project004Slide24,
+    isShop: true,
+    title: '.004',
+    description: 'Page 24.',
+    id: 23,
+  },
+  {
+    type: SLIDE_IMAGE_TYPE,
+    image: project004Slide25,
+    isShop: true,
+    title: '.004',
+    description: 'Page 25.',
+    id: 24,
   },
 ];
