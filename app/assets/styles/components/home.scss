@@ -44,15 +44,16 @@
 
   &__actions-wrapper {
     @include absolute-center--horizontal;
-    bottom: 100px;
+    bottom: 50px;
+    opacity: 0;
     visibility: hidden;
-    transition: all 1s ease-in-out;
+    transition: all .1s ease-in-out;
     z-index: 15;
     animation-name: enterButtonAnimation;
-    animation-duration: 0s;
+    animation-duration: .1s;
     animation-iteration-count: 1;
     animation-timing-function: ease-in;
-    animation-delay: 0s;
+    animation-delay: .1s;
     animation-fill-mode: forwards;
 
     &--mobile {
