@@ -59,7 +59,7 @@ export const SERIES = [
     id: 4,
     title: '.004',
     year: '2019',
-    subtitle: 'Project 004 Subtitle',
+    subtitle: '50lb, recycled bright white newsprint, ink',
     description: '.004 is the fourth piece in OBSERVED’s series, launched in July 2019 on the streets of New York City. We wanted to make something you could have...so we made a paper. Don’t worry, there are a lot of pictures. But no crossword puzzle. Sorry.',
     link: PROJECT_004_ROUTE,
     background: project004Background,

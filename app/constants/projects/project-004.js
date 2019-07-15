@@ -24,7 +24,7 @@ import project004Slide23 from '../../assets/images/gallery/project004/slide23-pr
 import project004Slide24 from '../../assets/images/gallery/project004/slide24-project004.jpg';
 import project004Slide25 from '../../assets/images/gallery/project004/slide25-project004.jpg';
 import project004Cover from '../../assets/images/gallery/project004/cover-project004.jpg';
-// import project004Shop from '../../assets/images/gallery/project004/shop-project004.jpg';
+import project004Shop from '../../assets/images/gallery/project004/shop-project004.jpg';
 
 // Video Assets
 // import { VIDEO_003 } from '../../constants/videos';
@@ -239,5 +239,13 @@ export const PROJECT_004_SLIDES = [
     title: '.004',
     description: 'Final Print, Pages 48-49.',
     id: 24,
+  },
+  {
+    type: SLIDE_IMAGE_TYPE,
+    image: project004Shop,
+    isShop: true,
+    title: 'Shop The OBSERVED World',
+    description: 'The only place to find OBSERVED objects...',
+    id: 25,
   },
 ];
