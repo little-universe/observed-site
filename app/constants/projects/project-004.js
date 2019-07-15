@@ -45,7 +45,7 @@ export const PROJECT_004_SLIDES = [
     image: project004Cover,
     isShop: true,
     title: '.004',
-    description: 'Final Print, Cover Page.',
+    description: 'Final Print, Cover Pages.',
     id: 0,
   },
   {
@@ -53,7 +53,7 @@ export const PROJECT_004_SLIDES = [
     image: project004Slide2,
     isShop: true,
     title: '.004',
-    description: 'Final Print, Page 1-Page 2.',
+    description: 'Final Print, Pages 1-2.',
     id: 1,
   },
   {
@@ -61,7 +61,7 @@ export const PROJECT_004_SLIDES = [
     image: project004Slide3,
     isShop: true,
     title: '.004',
-    description: 'Final Print, Page 3-Page 4.',
+    description: 'Final Print, Pages 3-4.',
     id: 2,
   },
   {
@@ -69,7 +69,7 @@ export const PROJECT_004_SLIDES = [
     image: project004Slide4,
     isShop: true,
     title: '.004',
-    description: 'Final Print, Page 5-Page 6.',
+    description: 'Final Print, Pages 5-6.',
     id: 3,
   },
   {
@@ -77,7 +77,7 @@ export const PROJECT_004_SLIDES = [
     image: project004Slide5,
     isShop: true,
     title: '.004',
-    description: 'Final Print, Page 7-Page 8.',
+    description: 'Final Print, Pages 7-8.',
     id: 4,
   },
   {
@@ -85,7 +85,7 @@ export const PROJECT_004_SLIDES = [
     image: project004Slide6,
     isShop: true,
     title: '.004',
-    description: 'Final Print, Page 9-Page 10.',
+    description: 'Final Print, Pages 9-10.',
     id: 5,
   },
   {
@@ -93,7 +93,7 @@ export const PROJECT_004_SLIDES = [
     image: project004Slide7,
     isShop: true,
     title: '.004',
-    description: 'Final Print, Page 11-Page 12.',
+    description: 'Final Print, Pages 11-12.',
     id: 6,
   },
   {
@@ -101,7 +101,7 @@ export const PROJECT_004_SLIDES = [
     image: project004Slide8,
     isShop: true,
     title: '.004',
-    description: 'Final Print, Page 13-Page 14.',
+    description: 'Final Print, Pages 13-14.',
     id: 7,
   },
   {
@@ -109,7 +109,7 @@ export const PROJECT_004_SLIDES = [
     image: project004Slide9,
     isShop: true,
     title: '.004',
-    description: 'Final Print, Page 15-Page 16.',
+    description: 'Final Print, Pages 15-16.',
     id: 8,
   },
   {
@@ -117,7 +117,7 @@ export const PROJECT_004_SLIDES = [
     image: project004Slide10,
     isShop: true,
     title: '.004',
-    description: 'Final Print, Page 17-Page 18.',
+    description: 'Final Print, Pages 17-18.',
     id: 9,
   },
   {
@@ -125,7 +125,7 @@ export const PROJECT_004_SLIDES = [
     image: project004Slide11,
     isShop: true,
     title: '.004',
-    description: 'Final Print, Page 19-Page 20.',
+    description: 'Final Print, Pages 19-20.',
     id: 10,
   },
   {
@@ -133,7 +133,7 @@ export const PROJECT_004_SLIDES = [
     image: project004Slide12,
     isShop: true,
     title: '.004',
-    description: 'Final Print, Page 21-Page 22.',
+    description: 'Final Print, Pages 21-22.',
     id: 11,
   },
   {
@@ -141,7 +141,7 @@ export const PROJECT_004_SLIDES = [
     image: project004Slide13,
     isShop: true,
     title: '.004',
-    description: 'Final Print, Page 23-Page 24.',
+    description: 'Final Print, Pages 23-24.',
     id: 12,
   },
   {
@@ -149,7 +149,7 @@ export const PROJECT_004_SLIDES = [
     image: project004Slide14,
     isShop: true,
     title: '.004',
-    description: 'Final Print, Page 25-Page 26.',
+    description: 'Final Print, Pages 25-26.',
     id: 13,
   },
   {
@@ -157,7 +157,7 @@ export const PROJECT_004_SLIDES = [
     image: project004Slide15,
     isShop: true,
     title: '.004',
-    description: 'Final Print, Page 27-Page 28.',
+    description: 'Final Print, Pages 27-28.',
     id: 14,
   },
   {
@@ -165,7 +165,7 @@ export const PROJECT_004_SLIDES = [
     image: project004Slide16,
     isShop: true,
     title: '.004',
-    description: 'Final Print, Page 30-Page 31.',
+    description: 'Final Print, Pages 30-31.',
     id: 15,
   },
   {
@@ -173,7 +173,7 @@ export const PROJECT_004_SLIDES = [
     image: project004Slide17,
     isShop: true,
     title: '.004',
-    description: 'Final Print, Page 32-Page 33.',
+    description: 'Final Print, Pages 32-33.',
     id: 16,
   },
   {
@@ -181,7 +181,7 @@ export const PROJECT_004_SLIDES = [
     image: project004Slide18,
     isShop: true,
     title: '.004',
-    description: 'Final Print, Page 34-Page 35.',
+    description: 'Final Print, Pages 34-35.',
     id: 17,
   },
   {
@@ -189,7 +189,7 @@ export const PROJECT_004_SLIDES = [
     image: project004Slide19,
     isShop: true,
     title: '.004',
-    description: 'Final Print, Page 36-Page 37.',
+    description: 'Final Print, Pages 36-37.',
     id: 18,
   },
   {
@@ -197,7 +197,7 @@ export const PROJECT_004_SLIDES = [
     image: project004Slide20,
     isShop: true,
     title: '.004',
-    description: 'Final Print, Page 38-Page 39.',
+    description: 'Final Print, Pages 38-39.',
     id: 19,
   },
   {
@@ -205,7 +205,7 @@ export const PROJECT_004_SLIDES = [
     image: project004Slide21,
     isShop: true,
     title: '.004',
-    description: 'Final Print, Page 40-Page 41.',
+    description: 'Final Print, Pages 40-41.',
     id: 20,
   },
   {
@@ -213,7 +213,7 @@ export const PROJECT_004_SLIDES = [
     image: project004Slide22,
     isShop: true,
     title: '.004',
-    description: 'Final Print, Page 42-Page 43.',
+    description: 'Final Print, Pages 42-43.',
     id: 21,
   },
   {
@@ -221,7 +221,7 @@ export const PROJECT_004_SLIDES = [
     image: project004Slide23,
     isShop: true,
     title: '.004',
-    description: 'Final Print, Page 44-Page 45.',
+    description: 'Final Print, Pages 44-45.',
     id: 22,
   },
   {
@@ -229,7 +229,7 @@ export const PROJECT_004_SLIDES = [
     image: project004Slide24,
     isShop: true,
     title: '.004',
-    description: 'Final Print, Page 46-Page 47.',
+    description: 'Final Print, Pages 46-47.',
     id: 23,
   },
   {
@@ -237,7 +237,7 @@ export const PROJECT_004_SLIDES = [
     image: project004Slide25,
     isShop: true,
     title: '.004',
-    description: 'Final Print, Page 48-Page 49.',
+    description: 'Final Print, Pages 48-49.',
     id: 24,
   },
 ];
