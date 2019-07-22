@@ -8,9 +8,12 @@
     height: auto;
     padding: 0;
     text-align: center;
-    max-width: 850px;
+    max-width: 650px;
     margin: 0 auto;
     width: 100%;
+  }
+  @include smaller-than(tablet) {
+    top: 60% !important;
   }
 
   @include larger-than(tablet) {

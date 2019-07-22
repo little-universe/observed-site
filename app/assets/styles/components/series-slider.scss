@@ -65,6 +65,9 @@
     @include larger-than(mobile) {
       font-size: 35px;
     }
+    @include smaller-than(tablet) {
+      font-size: 150%;
+    }
   }
 
   &__details-year {
@@ -99,6 +102,9 @@
     @include larger-than(mobile) {
       padding: 20px 0;
       font-size: 16px;
+    }
+    @include smaller-than(tablet) {
+      font-size: 80% !important;
     }
   }
 
@@ -235,6 +241,11 @@
         }
       }
     }
+    @include smaller-than(tablet) {
+      span {
+        font-size: 70% !important;
+      }
+    }
 
   }
 
@@ -294,7 +305,8 @@
     background: rgba(0, 0, 0, 0.2);
 
     @include larger-than(mobile) {
-      height: 637.5px;
+      // height: 637.5px;
+      height: 100%;
       width: 100px;
     }
 
@@ -317,7 +329,8 @@
     background: rgba(0, 0, 0, 0.2);
 
     @include larger-than(mobile) {
-      height: 637.5px;
+      // height: 637.5px;
+      height: 100%;
       width: 100px;
     }
 
