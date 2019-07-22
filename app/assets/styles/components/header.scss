@@ -27,6 +27,16 @@
     align-items: center;
     text-decoration: none;
   }
+  &__right-content {
+    display: flex;
+  }
+  &__instagram {
+    width: 20px;
+    margin-right: 40px;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
 
   &__logo {
     width: 170px;

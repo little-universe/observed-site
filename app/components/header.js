@@ -7,6 +7,7 @@ import observedLogo from '../assets/images/logo.svg';
 import menuOpen from '../assets/images/menu-open.svg';
 import menuClose from '../assets/images/menu-close.svg';
 import shopCart from '../assets/images/cart.svg';
+import instagram from '../assets/images/instagram-logo.svg';
 import type { HeaderType } from '../types/header';
 import { PromoBanner } from '../components/promo-banner';
 import {
@@ -211,6 +212,16 @@ class HeaderComponent extends PureComponent<Props> {
 
     return (
       <div className='header__right-content'>
+      <a
+        href={`https://www.instagram.com/weareobserved/`}
+        className='header__instagram'
+      >
+        <img
+          alt='Instagram'
+          className='header__instagram'
+          src={instagram}
+        />
+      </a>
         <a
           href={SHOP_LINK}
           className='header__shop header__shop--desktop'
