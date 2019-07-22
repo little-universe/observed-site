@@ -34,6 +34,9 @@
   &__instagram {
     width: 20px;
     margin-right: 40px;
+    @include smaller-than(tablet) {
+      margin-right: 10px;
+    }
     &:hover {
       opacity: 0.8;
     }
@@ -131,6 +134,11 @@
     color: $main-text;
     margin-bottom: -30px;
     padding-top: 5px;
+    width: 100vw;
+    position: absolute;
+    left: 0;
+    top: 40px;
+    text-align: center;
 
     @include larger-than(mobile) {
       display: none;
