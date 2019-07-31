@@ -26,7 +26,9 @@
     left: 0;
     right: 0;
     @include smaller-than(tablet) {
-      height: 80%;
+      .series-slider {
+      height: 80%;  
+      }
     }
   }
 }

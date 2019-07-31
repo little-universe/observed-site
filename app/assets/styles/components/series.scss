@@ -13,7 +13,7 @@
     width: 100%;
   }
   @include smaller-than(tablet) {
-    top: 60% !important;
+    top: 60%;
   }
 
   @include larger-than(tablet) {
