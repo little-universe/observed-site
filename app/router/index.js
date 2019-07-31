@@ -12,6 +12,7 @@ import { HomeView } from '../views/home';
 import { Project001View } from '../views/project-001';
 import { Project002View } from '../views/project-002';
 import { Project003View } from '../views/project-003';
+import { Project004View } from '../views/project-004';
 
 import { HeaderContainer } from '../containers/header';
 import { MenuContainer } from '../containers/menu';
@@ -23,6 +24,7 @@ import {
   PROJECT_001_ROUTE,
   PROJECT_002_ROUTE,
   PROJECT_003_ROUTE,
+  PROJECT_004_ROUTE,
   CONTACT_ROUTE,
   ABOUT_ROUTE,
   SHOP_ROUTE,
@@ -72,6 +74,10 @@ export default () => (
       <Route
         path={PROJECT_003_ROUTE}
         component={Project003View}
+      />
+      <Route
+        path={PROJECT_004_ROUTE}
+        component={Project004View}
       />
       <Route component={NotFoundView} />
     </Switch>

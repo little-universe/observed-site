@@ -5,7 +5,9 @@ import { FacebookShareButton, TwitterShareButton } from 'react-share';
 import cx from 'classnames';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 
-const SHARE_URL = 'https://weareobserved.com';
+{/*const SHARE_URL = 'https://weareobserved.com';*/}
+const url = window.location.href;
+const SHARE_URL = url;
 const SHARE_TEXT = 'Have you heard the good word about OBSERVED? The world waits...';
 const SHARE_HASHTAG = 'weareobserved';
 
@@ -48,7 +50,8 @@ class ShareButton extends PureComponent<{}, State> {
               Facebook
             </div>
           </FacebookShareButton>
-          <CopyToClipboard text='https://weareobserved.com'>
+          {/*<CopyToClipboard text='https://weareobserved.com'>*/}
+          <CopyToClipboard text={SHARE_URL}>
             <button className='share-button__dropdown-item'>
               Copy Link
             </button>

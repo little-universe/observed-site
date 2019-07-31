@@ -53,7 +53,7 @@
     "style-loader": "^0.20.3",
     "webpack": "^4.4.1",
     "webpack-bundle-analyzer": "^2.13.1",
-    "webpack-cli": "^2.0.13",
+    "webpack-cli": "^2.1.5",
     "webpack-dev-server": "^3.1.1"
   },
   "dependencies": {
@@ -67,6 +67,7 @@
     "react-audio-player": "^0.11.0",
     "react-copy-to-clipboard": "^5.0.1",
     "react-dom": "16.3.2",
+    "react-easy-swipe": "0.0.18",
     "react-ga": "^2.5.3",
     "react-mailchimp-subscribe": "^2.0.2",
     "react-redux": "^5.0.7",
@@ -78,7 +79,8 @@
     "redux-thunk": "^2.2.0",
     "ulid": "^2.3.0",
     "uuid": "^3.2.1",
-    "video-react": "^0.13.0"
+    "video-react": "^0.13.0",
+    "yarn": "^1.16.0"
   },
   "pre-commit": [
     "lint",

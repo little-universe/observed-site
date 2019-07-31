@@ -1,12 +1,16 @@
 // @flow
 
 import React, { Fragment, PureComponent } from 'react';
+import Swipe from 'react-easy-swipe';
 import { Link } from 'react-router-dom';
 import debounce from 'lodash.debounce';
 import cx from 'classnames';
+import { SHOP_LINK } from '../constants/shop';
 import arrowLeftImage from '../assets/images/arrow-left.svg';
 import arrowRightImage from '../assets/images/arrow-right.svg';
 import chevronRightImage from '../assets/images/chevron-dark-bg-right.svg';
+import { trackClickedToGallery } from '../utils/analytics';
+import { navigateToShop } from '../utils/navigation';
 
 const IS_MOBILE = window.innerWidth <= 768;
 
@@ -90,17 +94,22 @@ class SeriesSlider extends PureComponent<Props, State> {
 
     return (
       <Fragment>
-        {projects.map(project => (
-          <div
-            key={project.id}
-            className='series-slider__series-background'
-            style={{
-              backgroundImage: `url(${project.background})`,
-              opacity: (activeIndex === project.id) ? 1 : 0,
-              zIndex: project.id + 50,
-            }}
-          />
-        ))}
+        <Swipe
+          onSwipeLeft={() => this.goToNextSlide()}
+          onSwipeRight={() => this.goToPreviousSlide()}
+        >
+          {projects.map(project => (
+            <div
+              key={project.id}
+              className='series-slider__series-background'
+              style={{
+                backgroundImage: `url(${project.background})`,
+                opacity: (activeIndex === project.id) ? 1 : 0,
+                zIndex: project.id + 50,
+              }}
+            />
+          ))}
+        </Swipe>
       </Fragment>
     );
   }
@@ -115,6 +124,7 @@ class SeriesSlider extends PureComponent<Props, State> {
       description,
       link,
       extraDescription,
+      hasShop,
     } = projects[activeIndex];
 
     const numOfProjects = projects.length - 1;
@@ -154,9 +164,19 @@ class SeriesSlider extends PureComponent<Props, State> {
           <Link
             to={link}
             className='series-slider__details-link'
+            onClick={trackClickedToGallery}
           >
             View Project
           </Link>
+        )}
+        {(!hasShop || hasShop === false) ? null : (
+          <a
+            href={SHOP_LINK}
+            className='series-slider__shop-button'
+            onClick={navigateToShop}
+          >
+            Shop
+          </a>
         )}
       </div>
     );

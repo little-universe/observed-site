@@ -65,6 +65,9 @@
     @include larger-than(mobile) {
       font-size: 35px;
     }
+    @include smaller-than(tablet) {
+      font-size: 150%;
+    }
   }
 
   &__details-year {
@@ -99,6 +102,9 @@
     @include larger-than(mobile) {
       padding: 20px 0;
       font-size: 16px;
+    }
+    @include smaller-than(tablet) {
+      font-size: 80%;
     }
   }
 
@@ -235,6 +241,11 @@
         }
       }
     }
+    @include smaller-than(tablet) {
+      span {
+        font-size: 70%;
+      }
+    }
 
   }
 
@@ -294,7 +305,8 @@
     background: rgba(0, 0, 0, 0.2);
 
     @include larger-than(mobile) {
-      height: 637.5px;
+      // height: 637.5px;
+      height: 100%;
       width: 100px;
     }
 
@@ -317,7 +329,8 @@
     background: rgba(0, 0, 0, 0.2);
 
     @include larger-than(mobile) {
-      height: 637.5px;
+      // height: 637.5px;
+      height: 100%;
       width: 100px;
     }
 
@@ -375,6 +388,31 @@
       @include larger-than(tablet) {
         display: none;
       }
+    }
+  }
+  &__shop-button {
+    width: 100%;
+    font-size: 11px;
+    cursor: pointer;
+    padding: 6px 10px;
+    font-family: $grotesque-black;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    border: 1px solid $bgColorDark;
+    background: $bgColorDark;
+    color: #f3f3f3;
+    margin-top: 10px;
+    padding: 5px;
+    text-decoration: none;
+    text-align: center;
+
+    @include larger-than(tablet) {
+      // margin-bottom: 10px;
+      font-size: 16px;
+    }
+
+    &:hover {
+      background: #939598;
     }
   }
 }

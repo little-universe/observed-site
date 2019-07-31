@@ -25,5 +25,10 @@
     bottom: 0;
     left: 0;
     right: 0;
+    @include smaller-than(tablet) {
+      .series-slider {
+      height: 80%;  
+      }
+    }
   }
 }

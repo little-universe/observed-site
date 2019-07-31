@@ -18,6 +18,7 @@
   &__wrapper {
     @include absolute-center;
     text-align: center;
+    margin-top: 50px;
   }
 
   &__logo {
@@ -61,6 +62,11 @@
       padding: 30px 0 2px 10px;
       margin-bottom: 1vh;
       font-size: 30px;
+    }
+    @include smaller-than(desktop) {
+      padding: 15px 0 2px 10px;
+      margin-bottom: 13px;
+      font-size: 20px;
     }
   }
 

@@ -8,11 +8,12 @@ type Props = {
   data: Array<string>,
   showLogo?: boolean,
   onClick: Function,
+  className: string
 }
 
 export const AboutSlide = (props: Props) => (
   <button
-    className='about__slide'
+    className={`about__slide ${props.className}`}
     onClick={props.onClick}
   >
     <div className='about__slide-content'>

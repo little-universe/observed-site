@@ -7,6 +7,7 @@ import { SERIES_ROUTE } from '../constants/routes';
 import { isMobile } from '../utils/mobile';
 import loopImageAsset from '../assets/images/loop.gif';
 import fadeImageAsset from '../assets/images/fade.gif';
+import { trackClickedToEnter } from '../utils/analytics';
 
 type Props = {};
 type State = {
@@ -25,7 +26,7 @@ class HomeView extends PureComponent<Props, State> {
       this.setState(() => ({
         isLooping: true,
       }));
-    }, 8000);
+    }, 0);
   }
 
   render() {
@@ -62,7 +63,12 @@ class HomeView extends PureComponent<Props, State> {
           <Link
             to={SERIES_ROUTE}
             className='home__actions-button'
+            onClick={trackClickedToEnter}
           >
+            <span className="top"/>
+            <span className="bottom"/>
+            <span className="left"/>
+            <span className="right"/>
             Enter
           </Link>
         </div>

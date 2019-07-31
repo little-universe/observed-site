@@ -7,7 +7,9 @@ import observedLogo from '../assets/images/logo.svg';
 import menuOpen from '../assets/images/menu-open.svg';
 import menuClose from '../assets/images/menu-close.svg';
 import shopCart from '../assets/images/cart.svg';
+import instagram from '../assets/images/instagram-logo.svg';
 import type { HeaderType } from '../types/header';
+import { PromoBanner } from '../components/promo-banner';
 import {
   SERIES_ROUTE,
   CONTACT_ROUTE,
@@ -17,8 +19,10 @@ import {
   PROJECT_001_ROUTE,
   PROJECT_002_ROUTE,
   PROJECT_003_ROUTE,
+  PROJECT_004_ROUTE,
   PROJECT_INTRO_ROUTE,
 } from '../constants/routes';
+import { navigateToShop } from '../utils/navigation';
 
 type Props = {
   // Actions
@@ -43,6 +47,7 @@ class HeaderComponent extends PureComponent<Props> {
       case PROJECT_001_ROUTE:
       case PROJECT_002_ROUTE:
       case PROJECT_003_ROUTE:
+      case PROJECT_004_ROUTE:
         breadcrumb = 'GALLERY';
         route = SERIES_ROUTE;
         break;
@@ -109,7 +114,8 @@ class HeaderComponent extends PureComponent<Props> {
       pathname !== PROJECT_INTRO_ROUTE &&
       pathname !== PROJECT_001_ROUTE &&
       pathname !== PROJECT_002_ROUTE &&
-      pathname !== PROJECT_003_ROUTE
+      pathname !== PROJECT_003_ROUTE &&
+      pathname !== PROJECT_004_ROUTE
     ) return null;
 
     const getAdditionalBreadcrumb = () => {
@@ -122,6 +128,8 @@ class HeaderComponent extends PureComponent<Props> {
           return '.002';
         case PROJECT_003_ROUTE:
           return '.003';
+        case PROJECT_004_ROUTE:
+          return '.004';
         default:
           return null;
       }
@@ -204,15 +212,27 @@ class HeaderComponent extends PureComponent<Props> {
 
     return (
       <div className='header__right-content'>
+      <a
+        href={`https://www.instagram.com/weareobserved/`}
+        className='header__instagram'
+      >
+        <img
+          alt='Instagram'
+          className='header__instagram'
+          src={instagram}
+        />
+      </a>
         <a
           href={SHOP_LINK}
           className='header__shop header__shop--desktop'
+          onClick={navigateToShop}
         >
           Shop
         </a>
         <a
           href={SHOP_LINK}
           className='header__shop header__shop--mobile'
+          onClick={navigateToShop}
         >
           <img
             src={shopCart}
@@ -223,12 +243,23 @@ class HeaderComponent extends PureComponent<Props> {
     );
   }
 
+  renderPromoContent = () => {
+    const { location: { pathname } } = this.props;
+    if (pathname === HOME_ROUTE) return null;
+    return (
+      <PromoBanner />
+    );
+  }
+
   render() {
     return (
-      <div className='header'>
-        {this.renderLeftContent()}
-        {this.renderCenterContent()}
-        {this.renderRightContent()}
+      <div>
+        {this.renderPromoContent()}
+        <div className='header'>
+          {this.renderLeftContent()}
+          {this.renderCenterContent()}
+          {this.renderRightContent()}
+        </div>
       </div>
     );
   }

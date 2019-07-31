@@ -11,7 +11,7 @@ import {
   ABOUT_SLIDE_2,
   ABOUT_SLIDE_3,
 } from '../constants/about';
-import backgroundImage from '../assets/images/background/about.jpg';
+// import backgroundImage from '../assets/images/background/about.jpg';
 import arrowLeftImage from '../assets/images/arrow-left.svg';
 import arrowRightImage from '../assets/images/arrow-right.svg';
 import chevronRightImage from '../assets/images/chevron-right.svg';
@@ -22,7 +22,7 @@ const SLIDE_INDEXES = [1, 2, 3]; // skips empty 0 slide
 
 type State = {
   slideIndex: number,
-}
+};
 
 class AboutView extends PureComponent<{}, State> {
   state = {
@@ -88,6 +88,7 @@ class AboutView extends PureComponent<{}, State> {
 
   renderControls = () => {
     const { slideIndex } = this.state;
+    const baseWidth = `calc(100% / ${SLIDE_INDEXES.length - 1})`;
 
     const getControlClassNames = num => cx({
       about__control: true,
@@ -99,10 +100,11 @@ class AboutView extends PureComponent<{}, State> {
         {SLIDE_INDEXES.map(num => (
           <div // eslint-disable-line
             key={num}
+            style={{ width: baseWidth }}
             className={getControlClassNames(num)}
             onClick={() => this.setState(() => ({ slideIndex: num }))}
           >
-            <div className='about__control-line' />
+            <div className='about__control-line' style={{ }} />
           </div>
         ))}
       </div>
@@ -168,7 +170,7 @@ class AboutView extends PureComponent<{}, State> {
 
     return (
       <div className='about'>
-        <ARWrapper backgroundImage={backgroundImage}>
+        <ARWrapper >
           <div className='about__slider-wrapper'>
             <Carousel
               className='about__slider'
@@ -180,18 +182,22 @@ class AboutView extends PureComponent<{}, State> {
               <AboutSlide
                 data={[]}
                 onClick={debouncedNextSlide}
+                className='about-slide-0'
               />
               <AboutSlide
                 data={ABOUT_SLIDE_1}
                 onClick={debouncedNextSlide}
+                className='about-slide-1'
               />
               <AboutSlide
                 data={ABOUT_SLIDE_2}
                 onClick={debouncedNextSlide}
+                className='about-slide-2'
               />
               <AboutSlide
                 data={ABOUT_SLIDE_3}
                 onClick={debouncedNextSlide}
+                className='about-slide-3'
                 showLogo
               />
             </Carousel>
