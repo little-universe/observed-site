@@ -1,11 +1,15 @@
 // @flow
 
 import React from 'react';
-import { PresentationImage } from '../components/presentation-image';
+import { PresentationSeries } from '../components/presentation-series';
+import { MAILER_SECTIONS } from '../constants/presentation/presentations';
 
 export const MailerView = () => (
   <div className='mailer'>
-      <PresentationImage/>
+      <PresentationSeries
+        presentationIndex={1}
+        sections={MAILER_SECTIONS}
+      />
       <div>hi</div>
   </div>
 );
