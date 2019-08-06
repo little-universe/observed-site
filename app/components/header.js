@@ -215,6 +215,7 @@ class HeaderComponent extends PureComponent<Props> {
       <a
         href={`https://www.instagram.com/weareobserved/`}
         className='header__instagram'
+        target='_blank'
       >
         <img
           alt='Instagram'
