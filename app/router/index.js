@@ -13,6 +13,7 @@ import { Project001View } from '../views/project-001';
 import { Project002View } from '../views/project-002';
 import { Project003View } from '../views/project-003';
 import { Project004View } from '../views/project-004';
+import { MailerView } from '../views/mailer';
 
 import { HeaderContainer } from '../containers/header';
 import { MenuContainer } from '../containers/menu';
@@ -29,6 +30,7 @@ import {
   ABOUT_ROUTE,
   SHOP_ROUTE,
   HOME_ROUTE,
+  MAILER_ROUTE,
 } from '../constants/routes';
 import { ProjectIntroView } from '../views/project-intro';
 
@@ -58,6 +60,10 @@ export default () => (
       <Route
         path={SERIES_ROUTE}
         component={SeriesView}
+      />
+      <Route
+        path={MAILER_ROUTE}
+        component={MailerView}
       />
       <Route
         path={PROJECT_INTRO_ROUTE}

@@ -5,6 +5,7 @@ export const SERIES_ROUTE = '/series';
 export const CONTACT_ROUTE = '/contact';
 export const ABOUT_ROUTE = '/about';
 export const SHOP_ROUTE = '/shop';
+export const MAILER_ROUTE = '/mailer';
 
 export const PROJECT_INTRO_ROUTE = '/000';
 export const PROJECT_001_ROUTE = '/001';
