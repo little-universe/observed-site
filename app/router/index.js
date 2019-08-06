@@ -36,9 +36,6 @@ import { ProjectIntroView } from '../views/project-intro';
 
 export default () => (
   <Fragment>
-    <HeaderContainer />
-    <MenuContainer />
-    <LightboxContainer />
     <Switch>
       <Route
         path={HOME_ROUTE}

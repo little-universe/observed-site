@@ -1,0 +1,24 @@
+.presentation-series {
+  width: 100%;
+  height: 100%;
+  padding: $buffer*2;
+  font-family: $grotesque-regular;
+  &__section-content {
+  }
+  &__section-image {
+    .caption-container {
+      height: $buffer*2;
+      display: flex;
+      align-items: center;
+      font-size: 12px;
+      .caption-header {
+        text-transform: uppercase;
+        font-family: $grotesque-bold;
+      }
+    }
+  }
+  &__section-text {
+    font-size: 26px;
+  }
+
+}

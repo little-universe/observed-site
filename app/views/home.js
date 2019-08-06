@@ -1,6 +1,6 @@
 // @flow
 
-import React, { PureComponent } from 'react';
+import React, { PureComponent, Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import cx from 'classnames';
 import { SERIES_ROUTE } from '../constants/routes';
@@ -8,6 +8,10 @@ import { isMobile } from '../utils/mobile';
 import loopImageAsset from '../assets/images/loop.gif';
 import fadeImageAsset from '../assets/images/fade.gif';
 import { trackClickedToEnter } from '../utils/analytics';
+
+import { HeaderContainer } from '../containers/header';
+import { MenuContainer } from '../containers/menu';
+import { LightboxContainer } from '../containers/lightbox';
 
 type Props = {};
 type State = {
@@ -58,6 +62,10 @@ class HomeView extends PureComponent<Props, State> {
     };
 
     return (
+      <Fragment>
+      <HeaderContainer />
+      <MenuContainer />
+      <LightboxContainer />
       <div className='home'>
         <div className={actionsWrapperClasses}>
           <Link
@@ -83,6 +91,7 @@ class HomeView extends PureComponent<Props, State> {
           />
         </div>
       </div>
+      </Fragment>
     );
   }
 }

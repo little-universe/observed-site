@@ -10,6 +10,5 @@ export const MailerView = () => (
         presentationIndex={1}
         sections={MAILER_SECTIONS}
       />
-      <div>hi</div>
   </div>
 );

@@ -1,6 +1,6 @@
 // @flow
 
-import React, { PureComponent } from 'react';
+import React, { PureComponent, Fragment } from 'react';
 import debounce from 'lodash.debounce';
 import Carousel from 'nuka-carousel';
 import cx from 'classnames';
@@ -12,6 +12,11 @@ import {
   ABOUT_SLIDE_3,
 } from '../constants/about';
 // import backgroundImage from '../assets/images/background/about.jpg';
+
+import { HeaderContainer } from '../containers/header';
+import { MenuContainer } from '../containers/menu';
+import { LightboxContainer } from '../containers/lightbox';
+
 import arrowLeftImage from '../assets/images/arrow-left.svg';
 import arrowRightImage from '../assets/images/arrow-right.svg';
 import chevronRightImage from '../assets/images/chevron-right.svg';
@@ -169,6 +174,10 @@ class AboutView extends PureComponent<{}, State> {
     const debouncedNextSlide = debounce(this.goToNextSlide, 300);
 
     return (
+      <Fragment>
+      <HeaderContainer />
+      <MenuContainer />
+      <LightboxContainer />
       <div className='about'>
         <ARWrapper >
           <div className='about__slider-wrapper'>
@@ -205,6 +214,7 @@ class AboutView extends PureComponent<{}, State> {
           </div>
         </ARWrapper>
       </div>
+      </Fragment>
     );
   }
 }

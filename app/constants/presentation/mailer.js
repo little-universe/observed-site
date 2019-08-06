@@ -12,19 +12,20 @@ import {
 export const MAILER_SECTIONS = [
   {
     type: SECTION_IMAGE_TYPE,
-    image: project001Slide1,
+    image: project001Slide2,
     captionHeader: 'The Custodian’s Thoughts',
-    captionSubtext: 'When .001 was on display, people who called The Custodian’s number (929.376.9828) heard this recording. While the number remains the same, the recording changes with each piece that OBSERVED releases.',
+    captionSubtext: 'some content',
     id: 0,
+  },
+  {
+    type: SECTION_TEXT_TYPE,
+    image: project001Slide2,
+    textBody: 'some long text',
+    id: 1,
   },
   {
     type: SECTION_HEADER_TYPE,
     headerText: 'Work 001',
-    id: 1,
-  },
-  {
-    type: SECTION_TEXT_TYPE,
-    textBody: 'some long text',
     id: 2,
   },
 ];

@@ -1,6 +1,6 @@
 // @flow
 
-import React from 'react';
+import React, { Fragment } from 'react';
 import { ARWrapper } from '../components/ar-wrapper';
 import { InstagramSocialComponent } from '../components/instagram';
 import {
@@ -8,6 +8,10 @@ import {
   CONTACT_PHONES,
 } from '../constants/contact';
 import contactBGImage from '../assets/images/background/contact.jpg';
+
+import { HeaderContainer } from '../containers/header';
+import { MenuContainer } from '../containers/menu';
+import { LightboxContainer } from '../containers/lightbox';
 
 const getEmailList = () => CONTACT_EMAILS.map((item: Object) => (
   <div
@@ -50,6 +54,10 @@ const getPhonesList = () => CONTACT_PHONES.map((item: Object) => (
 const getSocialIcons = () => <InstagramSocialComponent isNotFullWidth />;
 
 export const ContactView = () => (
+  <Fragment>
+  <HeaderContainer />
+  <MenuContainer />
+  <LightboxContainer />
   <div className='contact'>
     <ARWrapper
       backgroundImage={contactBGImage}
@@ -62,4 +70,5 @@ export const ContactView = () => (
       </div>
     </ARWrapper>
   </div>
+  </Fragment>
 );
