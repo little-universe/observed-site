@@ -3,7 +3,32 @@
     .page-image {
       .image-wrapper {
         .image-source {
-          width: 100%;
+          max-width: 100%;
+          max-height: 100vh;
+        }
+      }
+      &.image-center {
+        .image-wrapper {
+          display: flex;
+          justify-content: flex-end;
+          .image-source {
+            max-height: 100%;
+            width: 100%;
+          }
+        }
+      }
+      &.image-left {
+        .image-wrapper {
+          display: flex;
+          justify-content: flex-start;
+          .image-source {}
+        }
+      }
+      &.image-right {
+        .image-wrapper {
+          display: flex;
+          justify-content: flex-end;
+          .image-source {}
         }
       }
     }

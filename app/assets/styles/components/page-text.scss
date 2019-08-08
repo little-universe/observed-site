@@ -1,5 +1,6 @@
 .page-section {
   &.section-text-container {
+    margin-bottom: $buffer*2;
     .page-text {
       .text-area {
         font-size: $base-font-size*1.5;
