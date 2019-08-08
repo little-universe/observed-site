@@ -1,0 +1,11 @@
+.page-section {
+  &.section-header-container {
+    .page-header {
+      padding: $buffer*20 0;
+      .header-text {
+        font-size: $base-font-size*3;
+        text-align: center;
+      }
+    }
+  }
+}

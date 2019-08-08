@@ -11,3 +11,7 @@
     @include absolute-center;
   }
 }
+.page-wrapper {
+  font-family: $grotesque-regular;
+  padding: $buffer*2;
+}

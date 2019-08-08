@@ -1,0 +1,20 @@
+.page-section {
+  &.section-image-container {
+    .page-image {
+      .image-wrapper {
+        .image-source {
+          width: 100%;
+        }
+      }
+    }
+    .image-caption {
+      .caption-header {
+        font-family: $grotesque-bold;
+        text-transform: uppercase;
+      }
+      .caption-text {
+        font-family: $grotesque-regular;
+      }
+    }
+  }
+}
