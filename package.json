@@ -80,7 +80,7 @@
     "ulid": "^2.3.0",
     "uuid": "^3.2.1",
     "video-react": "^0.13.0",
-    "yarn": "^1.16.0"
+    "yarn": "^1.22.0"
   },
   "pre-commit": [
     "lint",
