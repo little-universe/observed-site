@@ -49,7 +49,7 @@
     "pre-commit": "^1.2.2",
     "redux-logger": "^3.0.6",
     "sass-loader": "^6.0.7",
-    "serve": "^10.0.2",
+    "serve": "^10.1.2",
     "style-loader": "^0.20.3",
     "webpack": "^4.4.1",
     "webpack-bundle-analyzer": "^2.13.1",
